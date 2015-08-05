@@ -1,0 +1,55 @@
+<!doctype html>
+<html
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Blog</title>
+<link rel="stylesheet" href="/stylesheets/style.css">
+<link rel="stylesheet" href="/stylesheets/bootstrap.min2.css">
+<link rel="stylesheet" href="/stylesheets/bootstrap-responsive.css">
+</head>
+<body>
+<div class="container">
+	<div class="navbar navbar-fixed-top">
+  		<div class="navbar-inner">
+		<div class="container">
+    	<a class="brand" href="#">KEN BLOG</a>
+			<ul class="nav">
+				<li><a title="主页" href="/">主页</a></li>
+				<li><a title="存档" href="/archive">存档</a></li>
+				<li><a title="标签" href="/tags">标签</a></li>
+				<li><a title="友情链接" href="/links">链接</a></li>
+				<% if (user) {%>
+				<li><a title="上传" href="/upload">上传</a></li>
+				<li><a title="发表" href="/post">发表</a></li>
+				<% } else { %>
+				<% } %>
+				<!-- <li>
+					<span><form action="/search" method="GET"><input type="text" name="keyword" placeholder="search" class="search" /></form></span>
+				</li> -->
+			</ul>
+			<form class="navbar-search pull-left" action="/search" method="GET">
+			    <input type="text" name="keyword" class="search-query" placeholder="Search">
+			</form>
+			<ul class="nav pull-right">
+				<% if (user) { %>
+				<li><a><%= user.name %></a></li>
+				<li class="divider-vertical"></li>
+				<li><a title="登出" href="/logout">注销</a></li>
+				<% } else {%>
+				<li><a title="登录" href="/login">登录</a></li>
+				<li><a title="注册" href="/reg">注册</a></li>
+				<% } %>
+			</ul>
+		</div>
+		</div>
+	</div>
+</div>
+<div class="container">
+<article>
+<% if (success) { %>
+<div><%= success %></div>
+<% } %>
+<% if (error) { %>
+<div><%= error %></div>
+<% } %>

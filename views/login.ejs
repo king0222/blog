@@ -1,0 +1,27 @@
+<%- include header %>
+<form class="form-horizontal" method="post">
+  <div class="control-group">
+  <div class="input-prepend">
+    <span class="add-on">用户名</span>
+	<input class="span2" name="name" type="text" placeholder="Username">
+  </div>
+  </div>
+  <div class="control-group">
+  <div class="input-prepend">
+    <span class="add-on">密码</span>
+  <input class="span2" name="password" type="text" placeholder="password">
+  </div>
+  </div>
+  <div class="control-group">
+    <div class="controls">
+      <!-- <label class="checkbox">
+        <input type="checkbox"> Remember me
+      </label> -->
+      <% if (loginError) { %>
+		<div><%= loginError %></div>
+	  <% } %>
+      <div><button type="submit" class="btn">登录</button></div>
+    </div>
+  </div>
+</form>
+<%- include footer %>

@@ -1,0 +1,39 @@
+<%- include header %>
+<form class="form-horizontal" method="post">
+  <div class="control-group">
+    <label class="control-label" for="inputEmail">用户名</label>
+    <div class="controls">
+      <input type="text" name="name" placeholder="用户名">
+    </div>
+  </div>
+  <div class="control-group">
+    <label class="control-label" for="inputPassword">密码</label>
+    <div class="controls">
+      <input type="password" name="password" placeholder="密码">
+    </div>
+  </div>
+  <div class="control-group">
+    <label class="control-label" for="inputPassword">密码</label>
+    <div class="controls">
+      <input type="password" name="password-repeat" placeholder="密码">
+    </div>
+  </div>
+  <div class="control-group">
+    <label class="control-label" for="inputPassword">邮箱</label>
+    <div class="controls">
+      <input type="email" name="email" placeholder="邮箱">
+    </div>
+  </div>
+  <div class="control-group">
+    <div class="controls">
+      <!-- <label class="checkbox">
+        <input type="checkbox"> Remember me
+      </label> -->
+      <% if (regError) { %>
+      	<div><%= regError %></div>
+  	  <% } %>
+      <button type="submit" class="btn">注册</button>
+    </div>
+  </div>
+</form>
+<%- include footer %>

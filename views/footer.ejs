@@ -1,0 +1,19 @@
+</article>
+</div>
+<script charset="utf-8" src="/kindeditor/kindeditor-min.js"></script>
+<script src="/kindDditor/lang/zh_CN.js"></script>
+<script src="/javascripts/jquery.js"></script>
+<script src="/javascripts/bootstrap.min.js"></script>
+<script>
+	var editor;
+	KindEditor.ready(function(k) {
+		editor = k.create('textarea', {
+			allowImageUpload: false,
+			items: [
+			'fontname', 'fontsize', '|', 'forcecolor', 'hilitecolor', 'bold', 'italic', 'underline', 'removeformat', '|', 'justifyleft', 'justifycenter', 'justifyright', 'insertorderedlist', 'insertunorderedlist', '|', 'emoticons', 'image', 'link']
+		});
+	});
+	$('.carousel').carousel();
+</script>
+</body>
+</html>
